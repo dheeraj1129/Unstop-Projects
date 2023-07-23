@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assessment Form</title>
+  <!-- Link to Tailwind CSS CDN or use local version -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=FontName&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ 
+
+  <!-- for the creat acounnt  -->
+<div id="all" class="flex justify-center items-center w-full h-screen bg-red-800 " >wwww
+</div>
+<button id="animateButton" class="fixed top-4 right-4 bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600">Animate</button>
+
+  <div class="flex items-center justify-center h-screen hidden" id="mainContainer">
+
+    <div class="w-1/3">
+      
+      <!-- title -->
+      <h1 class="text-2xl font-bold mb-4">Create a new Assessment</h1><h2>close</h2>
+      <form class="space-y-4 ">
+        <div>
+          <label for="input1" class="block font-medium">Name of Assessment </label>
+          <input type="text" id="input1"
+            class="w-full px-4 py-2 border border-gray-300  rounded-md focus:ring focus:ring-indigo-300 focus:border-indigo-300"
+            placeholder="Type">
+        </div>
+
+        <div>
+          <label for="input2" class="block font-medium">Purpose of the test is</label>
+          <select id="input2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+            <option> </option>
+            <option> to improve skill</option>
+            <option value="option1">Option 1</option>
+          </select>
+        </div>
+
+
+        <div>
+          <label for="input2" class="block font-medium">Description</label>
+          <select id="input2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+            <option> </option>
+            <option> to improve skill</option>
+            <option value="option1">Option 1</option>
+          </select>
+        </div>
+
+
+        <div>
+          <label class="font-medium" for="skills"> Skills</label>
+          <div class="   w-full border  rounded-t-lg  justify-self-start " required>
+            <div class="grid grid-cols-2 gap-2 p-2 mb-4">
+
+              <div class="bg-slate-200 h-6 w-fit m-2 flex items-center justify-center rounded-xl">
+                <p class="p-4">Web development</p>
+              </div>
+              <div class="bg-slate-200 h-6 w-fit m-2 flex items-center justify-center rounded-xl">
+                <p class="p-4">Web development</p>
+              </div>
+              <div class="bg-slate-200 h-6 w-fit  m-2 flex items-center justify-center rounded-xl">
+                <p class="p-4">Web development</p>
+              </div>
+              <div class="bg-slate-200 h-6 w-fit m-2 flex items-center justify-center rounded-xl">
+                <p class="p-4">Web development</p>
+              </div>
+            </div>
+
+
+            <input placeholder="Type here" class="w-full h-12 border  border-stone-200 " required></input>
+          </div>
+        </div>
+
+        <div>
+          <label for="input5" class="block font-medium">Duration af Assisment</label>
+          <input type="text" id="input5" placeholder="HH:MM:SS"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+        </div>
+        <button type="submit"
+          class="w-full px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600">Save</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- css? -->
+
+  <style>
+    body {
+      color: rgb(49, 49, 180);
+    }
+
+    /* Animation keyframes for top-to-bottom animation */
+    @keyframes moveFromBottom {
+      0% {
+        transform: translateY(100%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Animation class to apply the animation to the main container */
+    .animate-top-to-bottom {
+      animation: moveFromBottom 1s ease-out forwards;
+    }
+  </style>
+  <!-- JavaScript to handle animation -->
+</style>
+
+<!-- JavaScript to handle animation -->
+<script>
+  const animateButton = document.getElementById('animateButton');
+  const mainContainer = document.getElementById('mainContainer');
+
+  function animatePage() {
+    // Hide the first page
+    document.getElementById('all').style.display = 'none';
+
+    mainContainer.classList.remove('hidden');
+    mainContainer.classList.add('animate-bottom-to-top');
+
+    // Remove the animation class after 1 second to reset the form position
+    setTimeout(() => {
+      mainContainer.classList.remove('animate-bottom-to-top');
+    }, 2000);
+  }
+
+  animateButton.addEventListener('click', () => {
+  all.hidden = true;
+});
+
+
+  animateButton.addEventListener('click', animatePage);
+</script> 
+
+</body>
+</html>
